@@ -1,7 +1,5 @@
 #Chess/Rice Problem
-
 import math
-
 chessboardspaces = 64
 y = 1
 for chessboardspaces in range(1,65,1):
