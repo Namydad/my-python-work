@@ -1,5 +1,6 @@
 #Zahlenraten
 import random
+import math
 attempt = 1
 active = True
 number = 5
