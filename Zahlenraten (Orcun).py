@@ -17,4 +17,5 @@ while True:
             x = 0
             y = 99
         else:
-            print("Danke fürs Spielen")
+            print("Danke fürs spielen")
+            break
