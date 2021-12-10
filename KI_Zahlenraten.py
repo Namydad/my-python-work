@@ -1,5 +1,6 @@
 import random
-nr = int(input("Welche Zahl soll von 0 bis 99 soll erraten werden? "))
+from getpass import getpass
+nr = int(getpass("Welche Zahl soll von 0 bis 99 soll erraten werden? "))
 guessing = True
 guess = 0
 y = 0 
@@ -20,7 +21,7 @@ while guessing==True:
             print("Wrong Input new Guess made!")
     if guess == 11:
         again = int(input("Wollen Sie nochmal spielen? (0/1)"))
-        if again == 0:
+        if again == 0: 
             print("Thanks for Playing!")
             guessing = False
         if again == 1:
