@@ -10,7 +10,7 @@ Version 3.0
 
 import math
 
-y = int(input("Wie viele Wiederstände? [1/2/0]"))
+y = int(input("Wie viele Wiederstände? [1/2/3]"))
 if y==1:
     r1 = float(input ("Bitte Widerstand eingeben: ")) # r ist der Radius der vom User eingegeben wird
     if r1 == 0: # r = 0 ist eine falsche Eingabe
@@ -23,17 +23,17 @@ elif y==2:
         print ("Falsche Eingabe")
         r1 = float(input("Bitte Wiederstand 1 neu eingeben"))
         r2 = float(input("Bitte Wiederstand 2 neu eingeben"))
-else:
+elif y==3:
     r1 = float(input ("Bitte Widerstand 1 eingeben: ")) # r ist der Radius der vom User eingegeben wird
     r2 = float(input ("Bitte Widerstand 2 eingeben: ")) # r ist der Radius der vom User eingegeben wird
-    r3 = float(input ("Bitte Widerstand 2 eingeben: ")) # r ist der Radius der vom User eingegeben wird
+    r3 = float(input ("Bitte Widerstand 3 eingeben: ")) # r ist der Radius der vom User eingegeben wird
     if r1 and r2 and r3 == 0: # r = 0 ist eine falsche Eingabe
         print ("Falsche Eingabe")
         r1 = float(input("Bitte Wiederstand 1 neu eingeben"))
         r2 = float(input("Bitte Wiederstand 2 neu eingeben"))
         r3 = float(input("Bitte Wiederstand 2 neu eingeben"))
-
-        
+else:
+    print("Falscher Input")      
 if y == 1:
     x = int(input("Ist die Schaltung in Reihe? [1/0]: "))
     if x==1:
