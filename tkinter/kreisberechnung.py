@@ -11,14 +11,25 @@ number = 0
 u=0
 f=0
 
+def square():
+    number= int(NumberInput.get())
+    u=number*4
+    f=number*number
+    u_float = "{:.2f}".format(u)
+    f_float = "{:.2f}".format(f)
+    LabelU['text'] = 'Umfang: ' + u_float + 'cm'
+    LabelF['text'] = 'Fläche: ' + f_float + 'cm²'
+    for i in range(number,1,-2):
+        canvasGraphic.create_rectangle(1,1,i,i, fill="white")
+    
 def calculation():
     number= int(NumberInput.get())
     u=number*pi*2
     f=pi*number*number
     u_float = "{:.2f}".format(u)
     f_float = "{:.2f}".format(f)
-    LabelU['text'] = u_float
-    LabelF['text'] = f_float
+    LabelU['text'] = 'Umfang: ' + u_float + 'cm'
+    LabelF['text'] = 'Fläche: ' + f_float + 'cm²'
     for i in range(number,1,-2):
         canvasGraphic.create_oval(1,1,i,i, fill="white")
     
@@ -32,7 +43,7 @@ def reset():
 LabelT = Label(window,text='Kreisberechnung', fg="blue",)
 LabelT.place(x=200,y=160)
 
-LabelN = Label(window,text='Radius',)
+LabelN = Label(window,text='Radius/Länge',)
 LabelN.place(x=200,y=200)
 
 NumberInput = Entry(window,bg='white',text=int,)
@@ -45,10 +56,10 @@ LabelU.place(x=200,y=250)
 LabelF = Label(window,text='Fläche:'+ str(f)+'cm²',)
 LabelF.place(x=200,y=280)
 
-BCalc = Button(window,text='Calculate', command=calculation)
+BCalc = Button(window,text='Circle', command=calculation)
 BCalc.place(x=200,y=320)
 
-BCalc = Button(window,text='Reset', command=reset)
+BCalc = Button(window,text='Square', command=square)
 BCalc.place(x=200,y=350)
 
 canvasGraphic = Canvas(window, width=400, height=400, bg='black',)
