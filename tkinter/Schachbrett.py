@@ -7,7 +7,7 @@ window = Tk()
 window.geometry("1900x1080")
 window.title("Calculator")
 
-def squares():
+def chessboard():
     for i in range(5,50,5):
         canvasGraphic.create_line((5*2)*5,(i+5)*5,(25*2)*5,(i+5)*5, fill='white') #vertical
         canvasGraphic.create_line((i+5)*5,(5*2)*5,(i+5)*5,(25*2)*5, fill='white') #horizontal
@@ -32,7 +32,7 @@ LabelT = Label(window,text='Schachbrett', fg="blue",)
 LabelT.place(x=200,y=205)
 
 
-BCalc = Button(window,text='Generieren', command=squares)
+BCalc = Button(window,text='Generieren', command=chessboard)
 BCalc.place(x=280,y=200)
 
 canvasGraphic = Canvas(window, width=600, height=600, bg='black',)
