@@ -9,8 +9,8 @@ window.title("Calculator")
 
 def squares():
     for i in range(5,50,5):
-        canvasGraphic.create_line((5*2)*2,(i+5)*2,(25*2)*2,(i+5)*2, fill='white')
-        canvasGraphic.create_line((i+5)*2,(5*2)*2,(i+5)*2,(25*2)*2, fill='white')
+        canvasGraphic.create_line((5*2)*5,(i+5)*5,(25*2)*5,(i+5)*5, fill='white')
+        canvasGraphic.create_line((i+5)*5,(5*2)*5,(i+5)*5,(25*2)*5, fill='white')
         
     
 
