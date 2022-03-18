@@ -1,13 +1,15 @@
 import tkinter
 from tkinter import *
 import math
-from unittest import TestProgram
+import csv
+
+with open('/home/namydad/Schreibtisch/Prog Python/my-python-work/tkinter/csv files/Temperatur-2021-Mannheim.csv', newline='') as csvfile:
+    temperatur = list(csv.reader(csvfile))
 
 """window = Tk()
 window.geometry("600x800")
 window.title("Temperatur Mannheim")"""
 
-temperatur=[0,2,3,5,6,1,2,3,4]
 
 def arrayAusgabe():
     print(temperatur)
@@ -45,4 +47,8 @@ avg=sum(temperatur)/len(temperatur)
 print("The Average is ",end="")
 print(avg)
 
-"""window.mainloop()"""
+for i in range(0,len(temperatur)):
+        outputstring=outputstring
+
+"""window.mainloop()
+"""
