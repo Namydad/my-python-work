@@ -9,10 +9,10 @@ window.geometry("1900x1080")
 window.title("Calculator")
 
 number = 0
-guessnumber=1
-guessed=['Alle Ratezahlen']
+guessnumber=0
+guessed=[]
 def generate():
-    number = random.randrange(0,100)
+    number = random.randrange(1,100)
     LabelC['text'] = number
 
 def guess():
@@ -40,8 +40,10 @@ def guess():
 def reset():
     NumberInput.delete(0,'end')
     NumberInput.insert(0,str(number))
+    guessed=[]        
+    LabelGuessed.config(text = guessed)
     LabelC['text'] = number
-    LabelD['text']= 1
+    LabelD['text']= 0
 
 LabelT = Label(window,text='Zufallszahl:',)
 LabelT.place(x=200,y=160)
@@ -49,8 +51,11 @@ LabelT.place(x=200,y=160)
 LabelC = Label(window,text=number,)
 LabelC.place(x=200,y=180,)
 
-LabelD = Label(window,text=guessnumber)
+LabelD = Label(window,text="Guess: ")
 LabelD.place(x=200,y=120)
+
+LabelD = Label(window,text=guessnumber)
+LabelD.place(x=260,y=120)
 
 LabelL = Label(window,text='Guess')
 LabelL.place(x=200,y=140)
@@ -58,8 +63,11 @@ LabelL.place(x=200,y=140)
 LabelBS = Label(window,text='')
 LabelBS.place(x=200,y=160)
 
+LabelGuessedTEXT = Label(window,text="Alle geratene Zahlen:")
+LabelGuessedTEXT.place(x=200,y=100)
+
 LabelGuessed = Label(window,text=guessed,)
-LabelGuessed.place(x=200,y=100)
+LabelGuessed.place(x=340,y=100)
 
 LabelN = Label(window,text='Zufallszahl-Nr:',)
 LabelN.place(x=200,y=200)
