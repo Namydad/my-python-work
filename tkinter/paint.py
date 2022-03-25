@@ -11,7 +11,6 @@ window.title("Drawing Board")
 
 def clear():
     DrawingBoard.delete('all')
-    DrawingBoard.create_rectangle(0,0,1900,1080)
 
 def setze(colorinfo):
     global color
@@ -39,6 +38,8 @@ colormenu = Menu(menubar, background='white', foreground='black', activebackgrou
 colormenu.add_command(label="Red", command=lambda:setze("red"))
 colormenu.add_command(label="Green", command=lambda:setze("green"))
 colormenu.add_command(label="Blue", command=lambda:setze("blue"))
+colormenu.add_command(label="Black", command=lambda:setze("black"))
+colormenu.add_command(label="Pink", command=lambda:setze("pink"))
 filemenu.add_command(label="Clear", command=clear )
 """filemenu.add_command(label="Save", command=save_file)"""
 filemenu.add_command(label="Exit", command=window.quit)
