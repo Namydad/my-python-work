@@ -28,11 +28,15 @@ def setobject(objectinfo):
 			('Text Document', '*.txt')]
 	file = asksaveasfile(filetypes = Files, defaultextension = Files)"""
 
-def painting(event,):
+def painting(event):
     x1=event.x-2.5
     y1=event.y-2.5
     x2=event.x+2.5
-    y2=event.y+2.5
+    y2=event.y+2.
+    x3=event.x
+    y3=event.y
+    if object=="rectangle":
+        DrawingBoard.create_rectangle(merkex,merkey,x3,y3,fill=color)
     if object=="freestyle":
         DrawingBoard.create_oval(x1, y1, x2, y2,fill=color)
 
