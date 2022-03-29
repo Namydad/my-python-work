@@ -45,7 +45,7 @@ def geometry(event):
     x2=event.x
     y2=event.y
     if object=="rectangle":
-        DrawingBoard.create_rectangle(merkex,merkey,x2,y2, outline=color)
+        DrawingBoard.create_rectangle(merkex,merkey,x2,y2, outline=color, fill=color)
 
 menubar = Menu(window, background='white', foreground='black', activebackground='white', activeforeground='black')
 
