@@ -25,10 +25,16 @@ while spielaktiv:
 
     screen.fill(GRUEN)
     pygame.draw.ellipse(screen,ROT,[ballpos_x,ballpos_y,BALL_DURCHMESSER,BALL_DURCHMESSER])
+    ballpos_y += bewegung_y
+    if ballpos_y >= FENSTERHOEHE - BALL_DURCHMESSER or ballpos_y:
+        bewegung_y = bewegung_y *(-1)
+
+    """""
     if ballpos_y < FENSTERHOEHE - BALL_DURCHMESSER:
         ballpos_y += bewegung_y
     if ballpos_y == 380:
         ballpos_y -= bewegung_y
+    """
 
     pygame.display.flip()
     clock.tick(60)
