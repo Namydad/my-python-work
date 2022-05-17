@@ -32,13 +32,16 @@ def painting(event):
     x1=event.x-2.5
     y1=event.y-2.5
     x2=event.x+2.5
-    y2=event.y+2.
+    y2=event.y+2.5 
     x3=event.x
     y3=event.y
     if object=="rectangle":
         DrawingBoard.create_rectangle(merkex,merkey,x3,y3,fill=color)
     if object=="freestyle":
         DrawingBoard.create_oval(x1, y1, x2, y2,fill=color)
+    if object=="eraser":
+        DrawingBoard.create_oval(x1-2.5, y1-2.5, x2+2.5, y2+2.5,fill='white', outline='white')
+
 
 def click(event): 
     global merkex,merkey
@@ -58,7 +61,7 @@ colormenu = Menu(menubar, background='white', foreground='black', activebackgrou
 objectmenu = Menu(menubar, background='white', foreground='black', activebackground='white', activeforeground='black')
 objectmenu.add_command(label="Freestyle", command=lambda:setobject("freestyle"))
 objectmenu.add_command(label="Rectangle", command=lambda:setobject("rectangle"))
-objectmenu.add_command(label="Test", command=lambda:setcolor("Test"))
+objectmenu.add_command(label="Eraser", command=lambda:setobject("eraser"))
 colormenu.add_command(label="Red", command=lambda:setcolor("red"))
 colormenu.add_command(label="Green", command=lambda:setcolor("green"))
 colormenu.add_command(label="Blue", command=lambda:setcolor("blue"))
