@@ -12,10 +12,11 @@ while True:
         x=r+1
     elif frage==5:
         print("Das Programm hat gewonnen")
-        again=str(input("Wollen sie nochmal spielen [J/N]"))
+        again=str(input("Wollen sie nochmal spielen [J/N]")) #YOA DU HAST NEN PUNKT STATT KOMMA
         if again == 'J':
             x = 0
             y = 99
         else:
             print("Danke fürs spielen")
             break
+            
