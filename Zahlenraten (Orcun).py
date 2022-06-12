@@ -18,4 +18,5 @@ while True:
             y = 99
         else:
             print("Danke fürs spielen")
+            #komma falsch
             break
